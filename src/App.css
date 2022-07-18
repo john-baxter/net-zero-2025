@@ -2,3 +2,9 @@
   margin-top: -25px;
 }
 
+.nav-tabs .active {
+  color: #B23CFD!important;
+  border-color: #B23CFD!important;
+}
+
+
