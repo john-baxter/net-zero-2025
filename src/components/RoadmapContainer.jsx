@@ -36,6 +36,12 @@ const RoadmapContainer = () => {
     return <div>An error occured: {error.message}</div>;
   }
 
+  // Get lengths
+  const completeAmount = completedMilestones.length;
+  const incompleteAmount = incompleteMilestones.length;
+
+  
+
 
 
   return (
@@ -45,7 +51,10 @@ const RoadmapContainer = () => {
           <CompletedMilestones milestones={completedMilestones} />
           <Milestones milestones={incompleteMilestones}/>
         </MDBRow>  
-        <ProgressBar />
+        <ProgressBar 
+        completeAmount={completeAmount}
+        incompleteAmount={incompleteAmount}
+        />
       </MDBContainer>
     </>
   );
