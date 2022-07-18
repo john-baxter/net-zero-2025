@@ -9,14 +9,26 @@ import { MDBContainer, MDBRow } from "mdb-react-ui-kit";
 const RoadmapContainer = () => {
   const [error, setError] = useState(null);
   const [completedMilestones, setCompletedMilestones] = useState([]);
+  const [incompleteMilestones, setIncompleteMilestones] = useState([]);
 
   useEffect(() => {
+    
     axios
       .get("https://jsonplaceholder.typicode.com/todos", {
-        params: { _limit: 4, offset: 0, completed: true },
+        params: { _limit: 2, offset: 0, completed: true },
       })
       .then(({ data }) => setCompletedMilestones(data))
       .catch((error) => setError(error));
+
+    axios
+      .get("https://jsonplaceholder.typicode.com/todos", {
+        params: {_limit: 2, offset: 0, completed: false },
+      })
+      .then(({ data }) => setIncompleteMilestones(data))
+      .catch((error) => setError(error));
+
+
+      
   }, []);
 
   if (error) {
@@ -24,12 +36,14 @@ const RoadmapContainer = () => {
     return <div>An error occured: {error.message}</div>;
   }
 
+
+
   return (
     <>
       <MDBContainer>
         <MDBRow className="d-flex justify-content-center">
           <CompletedMilestones milestones={completedMilestones} />
-          <Milestones />
+          <Milestones milestones={incompleteMilestones}/>
         </MDBRow>  
         <ProgressBar />
       </MDBContainer>
