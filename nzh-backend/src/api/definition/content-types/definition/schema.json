@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "definitions",
+  "info": {
+    "singularName": "definition",
+    "pluralName": "definitions",
+    "displayName": "definition"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "term": {
+      "type": "string"
+    },
+    "definition": {
+      "type": "richtext"
+    }
+  }
+}
