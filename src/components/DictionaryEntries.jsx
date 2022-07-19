@@ -28,7 +28,7 @@ const DictionaryEntries = (props) => {
 
       <div className="d-flex justify-content-center flex-row flex-wrap">
         {dictionary.map(({ id, name, body }) => (
-          <DictionaryEntry id={id} term={name} definition={body} />
+          <DictionaryEntry key={id} id={id} term={name} definition={body} />
         ))}
       </div>
     </MDBContainer>
