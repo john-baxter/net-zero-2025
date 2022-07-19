@@ -20,10 +20,7 @@ const HeroImage = () => {
               Net Zero 2025
             </h1>
             <p className="text-white fw-bold text-center pt-2">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
-              ullam nesciunt rerum atque sequi deleniti ea ex quas provident,
-              quidem ut, fuga quo eligendi temporibus. Atque quisquam optio
-              aliquid aliquam.
+            Welcome to the AND Net Zero Hub! Here we outline how we aim to achieve our 2025 BHAG to establish a different business operating model and platform to scale globally.
             </p>
           </div>
         </div>
