@@ -77,7 +77,6 @@ const Quiz = () => {
 				</div>
         
 			) : (
-        
 				<>
 					<div className='question-section'>
 						<div className='question-count'>
