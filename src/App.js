@@ -24,6 +24,7 @@ function App() {
 
     setBasicActive(value);
   };
+
   return (
     <div className="App">
       <Navbar />
