@@ -18,7 +18,7 @@ const DictionaryEntry = (props) => {
       >
         {term}
       </MDBBtn>
-      <MDBCollapse style={{ width: 250 + "px"}}show={showShow}>{definition} </MDBCollapse>
+      <MDBCollapse className="px-2" style={{ width: 250 + "px"}}show={showShow}>{definition} </MDBCollapse>
     </div>
   );
 };
