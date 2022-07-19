@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { MDBContainer, MDBInput } from "mdb-react-ui-kit";
+
 
 import DictionaryEntries from "./DictionaryEntries";
 
