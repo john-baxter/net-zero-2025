@@ -8,7 +8,7 @@ import DictionaryEntries from "./DictionaryEntries";
 const Dictionary = () => {
   const [error, setError] = useState(null);
   const [dictionary, setDictionary] = useState([]);
-  // const [searchTerm, setSearchTerm] = useState("");
+
 
   useEffect(() => {
     axios
@@ -18,11 +18,7 @@ const Dictionary = () => {
       .then(({ data }) => setDictionary(data))
       .catch((error) => setError(error));
 
-    // const filteredData =
-    // dictionary.filter(name) => name.toLowerCase()
-    // .includes(searchTerm.toLocaleLowerCase())
 
-    // setDictionary(filteredData)
   }, []);
 
   if (error) {
