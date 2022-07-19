@@ -6,7 +6,7 @@ const CompletedMilestones = (props) => {
 
   return (
     <>
-      {milestones.map(({ id, title }) => (
+      {milestones.map(({ id, attributes }) => (
         <MDBCol className="text-center" lg="3" md="6" sm="sm" key={id}>
           <MDBCard className="my-4 mx-auto" style={{ maxWidth: 250 + "px",  minHeight: 300 + 'px' }}>
             <div className="d-flex justify-content-center milestone-icon">
@@ -15,12 +15,11 @@ const CompletedMilestones = (props) => {
               </div>
             </div>
             <MDBCardBody>
-              <MDBCardTitle style={{ minHeight: 100 + 'px'}}>{title}</MDBCardTitle>
+              <MDBCardTitle style={{ minHeight: 100 + 'px'}}>{attributes.title}</MDBCardTitle>
               <MDBCardText>
-                {title}
-                
+                {attributes.description}
               </MDBCardText>
-              <MDBCardTitle>2025</MDBCardTitle>
+              <MDBCardTitle>{new Date(attributes.goal_date).getFullYear()}</MDBCardTitle>
             </MDBCardBody>
           </MDBCard>
         </MDBCol>

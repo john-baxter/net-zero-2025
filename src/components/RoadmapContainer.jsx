@@ -12,23 +12,22 @@ const RoadmapContainer = () => {
   const [incompleteMilestones, setIncompleteMilestones] = useState([]);
 
   useEffect(() => {
-    
+
     axios
-      .get("https://jsonplaceholder.typicode.com/todos", {
-        params: { _limit: 2, offset: 0, completed: true },
+      .get("https://fierce-inlet-05264.herokuapp.com/api/milestones", {
+        params: { "filters[is_complete][$eq]": true},
       })
-      .then(({ data }) => setCompletedMilestones(data))
+      .then(({ data }) => {
+          setCompletedMilestones(data.data);
+      })
       .catch((error) => setError(error));
 
     axios
-      .get("https://jsonplaceholder.typicode.com/todos", {
-        params: {_limit: 2, offset: 0, completed: false },
+      .get("https://fierce-inlet-05264.herokuapp.com/api/milestones", {
+        params: { "filters[is_complete][$eq]": false},
       })
-      .then(({ data }) => setIncompleteMilestones(data))
+      .then(({ data }) => setIncompleteMilestones(data.data))
       .catch((error) => setError(error));
-
-
-      
   }, []);
 
   if (error) {
@@ -39,10 +38,6 @@ const RoadmapContainer = () => {
   // Get lengths
   const completeAmount = completedMilestones.length;
   const incompleteAmount = incompleteMilestones.length;
-
-  
-
-
 
   return (
     <>

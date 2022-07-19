@@ -1,7 +1,4 @@
-import React, { useState } from "react";
-import "mdb-react-ui-kit/dist/css/mdb.min.css";
-import "./App.css";
-import RoadmapContainer from "./components/RoadmapContainer";
+import React, { useState } from "react"; import "mdb-react-ui-kit/dist/css/mdb.min.css"; import "./App.css"; import RoadmapContainer from "./components/RoadmapContainer";
 import Quiz from "./components/Quiz";
 import Dictionary from "./components/Dictionary";
 import {
