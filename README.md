@@ -68,3 +68,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+<hr>
+
+# getting started with Strapi
+
+0. `cd` into `nzh-backend`
+1. run `npm install`
+1. run `npm run develop`
+1. navigate to [this page](localhost:1337/admin)
+1. register a Strapi account with your own AND information
+1. navigate to **Content Manager** in Strapi
+1. import contents of `nzh-backend/strapi-data/<your choice of file>.json`
