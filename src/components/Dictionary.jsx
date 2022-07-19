@@ -1,13 +1,14 @@
 import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { MDBContainer } from 'mdb-react-ui-kit';
-import DictionaryEntry from "./DictionaryEntry";
+import { MDBContainer, MDBInput } from "mdb-react-ui-kit";
+
+import DictionaryEntries from "./DictionaryEntries";
 
 const Dictionary = () => {
   const [error, setError] = useState(null);
   const [dictionary, setDictionary] = useState([]);
-
+  // const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     axios
@@ -16,6 +17,12 @@ const Dictionary = () => {
       })
       .then(({ data }) => setDictionary(data))
       .catch((error) => setError(error));
+
+    // const filteredData =
+    // dictionary.filter(name) => name.toLowerCase()
+    // .includes(searchTerm.toLocaleLowerCase())
+
+    // setDictionary(filteredData)
   }, []);
 
   if (error) {
@@ -23,20 +30,12 @@ const Dictionary = () => {
     return <div>An error occured: {error.message}</div>;
   }
 
-
-
-
-
   return (
-    <MDBContainer  className="d-flex justify-content-center flex-row flex-wrap">
-      {dictionary.map(({ id, name, body }) => (
 
-        <DictionaryEntry id={id} term={name} definition={body}/>
-        
+      
+      <DictionaryEntries data={dictionary} />
 
-     
-      ))}
-    </MDBContainer>
+  
   );
 };
 

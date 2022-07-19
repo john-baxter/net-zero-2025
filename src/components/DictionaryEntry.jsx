@@ -11,7 +11,7 @@ const DictionaryEntry = (props) => {
   const { id, term, definition } = props;
   return (
     <div className="m-2" key={id}>
-      <MDBBtn
+      <MDBBtn color='secondary'
         style={{ width: 250 + "px", height: 50 + "px" }}
         tag="a"
         onClick={toggleShow}
