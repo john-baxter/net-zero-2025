@@ -1,5 +1,6 @@
 .milestone-icon {
   margin-top: -25px;
+  z-index: 999!important;
 }
 
 .nav-tabs .active {
@@ -10,11 +11,9 @@
 .app {
   margin:20px;
   padding:20px;
-  
   background-color:#B23CFD;
   border:#fff solid 5px;
   border-radius:15px;
-  
   min-height: 200px;
   height: min-content;
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
