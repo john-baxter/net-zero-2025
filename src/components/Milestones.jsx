@@ -18,7 +18,6 @@ const Milestones = (props) => {
               <MDBCardTitle style={{ minHeight: 100 + 'px'}}>{attributes.title}</MDBCardTitle>
               <MDBCardText>
                 {attributes.description}
-                
               </MDBCardText>
               <MDBCardTitle>{new Date(attributes.goal_date).getFullYear()}</MDBCardTitle>
             </MDBCardBody>
