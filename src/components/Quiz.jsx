@@ -45,7 +45,7 @@ const Quiz = (props) => {
             <div className="answer-section">
               {questions[currentQuestion].answerOptions[0].map((index) => (
                 <MDBBtn
-                  key={index.attributes.id}
+                  key={index.id}
                   className="mx-20 my-1 bg-light text-dark border-dark hover-overlay"
                   onClick={() =>
                     handleAnswerOptionClick(index.attributes.is_correct)
