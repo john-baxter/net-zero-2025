@@ -10,6 +10,7 @@ import {
 } from "mdb-react-ui-kit";
 import Navbar from "./components/Navbar";
 import HeroImage from "./components/HeroImage";
+import QuizDataHandler from "./components/QuizDataHandler";
 
 function App() {
   const [basicActive, setBasicActive] = useState("tab1");
@@ -57,7 +58,8 @@ function App() {
         </MDBTabsPane>
       </MDBTabsContent>
 
-      <Quiz />
+      {/* <Quiz /> */}
+      <QuizDataHandler/>
     </div>
   );
 }
