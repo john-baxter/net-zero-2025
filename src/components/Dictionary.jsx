@@ -12,10 +12,8 @@ const Dictionary = () => {
 
   useEffect(() => {
     axios
-      .get("https://jsonplaceholder.typicode.com/comments", {
-        params: { _limit: 15, offset: 0 },
-      })
-      .then(({ data }) => setDictionary(data))
+      .get("https://fierce-inlet-05264.herokuapp.com/api/definitions")
+      .then(({ data }) => setDictionary(data.data))
       .catch((error) => setError(error));
 
 
@@ -27,11 +25,7 @@ const Dictionary = () => {
   }
 
   return (
-
-      
-      <DictionaryEntries data={dictionary} />
-
-  
+    <DictionaryEntries data={dictionary} />
   );
 };
 

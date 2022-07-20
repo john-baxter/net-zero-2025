@@ -12,8 +12,8 @@ const DictionaryEntries = (props) => {
   useEffect(() => {
     setDictionary(data);
 
-    const filteredData = data.filter((id) =>
-      id.name.toLowerCase().includes(searchTerm.toLocaleLowerCase())
+    const filteredData = data.filter((index) =>
+      index.attributes.term.toLowerCase().includes(searchTerm.toLocaleLowerCase())
     );
 
     setDictionary(filteredData);
@@ -27,8 +27,8 @@ const DictionaryEntries = (props) => {
       />
 
       <div className="d-flex justify-content-center flex-row flex-wrap">
-        {dictionary.map(({ id, name, body }) => (
-          <DictionaryEntry key={id} id={id} term={name} definition={body} />
+        {dictionary.map(({ id, attributes }) => (
+          <DictionaryEntry key={id} id={id} term={attributes.term} definition={attributes.definition} />
         ))}
       </div>
     </MDBContainer>
