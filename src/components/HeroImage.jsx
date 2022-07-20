@@ -1,8 +1,26 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
+import axios from "axios";
 import LazyHero from "react-lazy-hero";
 import Hero from "../images/hero.jpg";
 
 const HeroImage = () => {
+  const [error, setError] = useState(null);
+  const [heroText, setHeroText] = useState("Welcome to the AND Net Zero Hub!");
+
+  useEffect(() => {
+    axios
+      .get("https://fierce-inlet-05264.herokuapp.com/api/hero-text")
+      .then(({ data }) => {
+          setHeroText(data.data.attributes.hero_text_content);
+      })
+      .catch((error) => setError(error));
+  });
+
+  if (error) {
+    // Print errors if any
+    return <div>An error occured: {error.message}</div>;
+  }
+
   return (
     <>
       <LazyHero
@@ -20,7 +38,7 @@ const HeroImage = () => {
               Net Zero 2025
             </h1>
             <p className="text-white fw-bold text-center pt-2">
-            Welcome to the AND Net Zero Hub! Here we outline how we aim to achieve our 2025 BHAG to establish a different business operating model and platform to scale globally.
+              { heroText }
             </p>
           </div>
         </div>
