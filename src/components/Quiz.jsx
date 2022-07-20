@@ -86,7 +86,7 @@ const Quiz = () => {
 					</div>
 					<div className='answer-section'>
 						{questions[currentQuestion].answerOptions.map((answerOption) => (
-							<MDBBtn className='mx-20 my-auto bg-light text-dark border-dark hover-overlay' onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</MDBBtn>
+							<MDBBtn className='mx-20 my-1 bg-light text-dark border-dark hover-overlay' onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</MDBBtn>
 						))}
 					</div>
           </>

@@ -20,7 +20,8 @@ const CompletedMilestones = (props) => {
                 {attributes.description}
               </MDBCardText>
               <MDBCardTitle>{new Date(attributes.goal_date).getFullYear()}</MDBCardTitle>
-            </MDBCardBody>
+            <div className='mask rounded-3' style={{ backgroundColor: 'rgba(255, 255, 1255, 0.5)' }}></div>   </MDBCardBody>
+         
           </MDBCard>
         </MDBCol>
       ))}
