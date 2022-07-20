@@ -13,11 +13,11 @@ const Navbar = () => {
               alt=''
               loading='lazy'
             />
-           
+
           </MDBNavbarBrand>
           <MDBNavbarNav right fullWidth={false} className=''>
             <MDBNavbarItem>
-            <MDBNavbarLink href='#'><MDBIcon icon='user' size='2x' className='text-white'/></MDBNavbarLink>
+              <MDBNavbarLink href='https://fierce-inlet-05264.herokuapp.com/admin'><MDBIcon icon='user' size='2x' className='text-white'/></MDBNavbarLink>
             </MDBNavbarItem>
           </MDBNavbarNav>
         </MDBContainer>
