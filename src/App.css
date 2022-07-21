@@ -16,11 +16,13 @@
   border-radius:10px;
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.2);
   display:flex;
-  justify-content:space-between
+  justify-content:space-between;
+  flex-wrap:wrap;
 }
 
 .tip-area {
-  margin-left:10px
+  margin-left:10px;
+  max-width:70%;
 }
 
 .tip-heading {

@@ -1,8 +1,9 @@
+import { MDBContainer } from 'mdb-react-ui-kit'
 import React from 'react'
 
 const TipsAndTricks = () => {
   return (
-    <>
+    <MDBContainer>
     <div className='tip-container'>
         <div className='tip-area'>
             <h1 className='tip-heading'>1. Use alternative travel methods</h1>
@@ -35,7 +36,7 @@ const TipsAndTricks = () => {
         </div>
         <img className='tip-image' src='https://images.unsplash.com/photo-1444393299901-d5270ace5365?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80' />
     </div>
-    </>
+    </MDBContainer>
   )
 }
 
