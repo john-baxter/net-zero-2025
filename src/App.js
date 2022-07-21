@@ -11,7 +11,7 @@ import {
 import Navbar from "./components/Navbar";
 import HeroImage from "./components/HeroImage";
 import QuizDataHandler from "./components/QuizDataHandler";
-import CalcWrapper from "./components/CalcWrapper";
+
 
 function App() {
   const [basicActive, setBasicActive] = useState("tab1");
@@ -61,7 +61,7 @@ function App() {
 
 
       <QuizDataHandler/>
-      <CalcWrapper/>
+
     </div>
   );
 }
