@@ -18,8 +18,8 @@ const Milestones = (props) => {
               </div>
             </div>
             <MDBCardBody>
-              <MDBCardTitle style={{ minHeight: 100 + 'px'}}>{attributes.title}</MDBCardTitle>
-              <MDBCardText>
+              <MDBCardTitle style={{ minHeight: 60 + 'px'}}>{attributes.title}</MDBCardTitle>
+              <MDBCardText style={{ minHeight: 140 + 'px'}}>
                 {attributes.description.split(" ").map( (word, index) => {
                   if (dictionary_map.has(word)){
                     return (

@@ -8,17 +8,56 @@
   border-color: #B23CFD!important;
 }
 
-.app {
+.tip-container {
   margin:20px;
   padding:20px;
+  background-color:#EDE7F6;
+  border:rgba(0,0,0,0) solid 1px;
+  border-radius:10px;
+  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.2);
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+
+.tip-area {
+  margin-left:10px;
+  max-width:70%;
+}
+
+.tip-heading {
+  font-size:24pt;
+}
+
+.tip-text {
+  font-size:13pt;
+}
+
+.tip-image {
+  width:200px;
+  height:200px;
+  margin-left:10px;
+  align-items:left;
+  border:#EDE7F6 solid 1px;
+  border-radius:10px;
+}
+
+.quiz-app {
+  margin:20px;
+  /* margin-top:40px; */
+  padding:20px;
   background-color:#B23CFD;
-  border:#fff solid 5px;
-  border-radius:15px;
+  /* border:#fff solid 5px; */
+  /* border-radius:15px; */
   min-height: 200px;
   height: min-content;
-  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+
   display: flex;
   justify-content: space-evenly;
+}
+
+.quiz-area {
+  margin-top:3000px;
 }
 
 /* QUESTION/TIMER/LEFT SECTION */
@@ -46,8 +85,8 @@
 }
 
 .score-section{
-  margin-top:45px;
+  margin-top:55px;
   font-weight:bolder;
-  font-size:30pt;
+  font-size:20pt;
 }
 

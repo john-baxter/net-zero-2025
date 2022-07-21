@@ -18,8 +18,8 @@ const CompletedMilestones = (props) => {
               </div>
             </div>
             <MDBCardBody>
-              <MDBCardTitle style={{ minHeight: 100 + 'px'}}>{attributes.title}</MDBCardTitle>
-              <MDBCardText>
+              <MDBCardTitle style={{ minHeight: 60 + 'px'}}>{attributes.title}</MDBCardTitle>
+              <MDBCardText style={{ minHeight: 140 + 'px'}}>
                 {attributes.description.split(" ").map( (word, index) => {
                   if (dictionary_map.has(word)){
                     return (
@@ -33,7 +33,6 @@ const CompletedMilestones = (props) => {
               </MDBCardText>
               <MDBCardTitle>{new Date(attributes.goal_date).getFullYear()}</MDBCardTitle>
             <div className='mask rounded-3' style={{ backgroundColor: 'rgba(255, 255, 1255, 0.5)' }}></div>   </MDBCardBody>
-         
           </MDBCard>
         </MDBCol>
       ))}
