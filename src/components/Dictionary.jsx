@@ -1,26 +1,13 @@
-import React from "react";
-import axios from "axios";
-import { useEffect, useState } from "react";
-
-
 import DictionaryEntries from "./DictionaryEntries";
 
-const Dictionary = () => {
-  const [error, setError] = useState(null);
-  const [dictionary, setDictionary] = useState([]);
+const Dictionary = (props) => {
+  const {dictionary, error} = props;
 
-
-  useEffect(() => {
-    axios
-      .get("https://fierce-inlet-05264.herokuapp.com/api/definitions")
-      .then(({ data }) => setDictionary(data.data))
-      .catch((error) => setError(error));
-
-
-  }, []);
+  if (dictionary.length == 0){
+    return <div>No dictionary data found</div>;
+  }
 
   if (error) {
-    // Print errors if any
     return <div>An error occured: {error.message}</div>;
   }
 

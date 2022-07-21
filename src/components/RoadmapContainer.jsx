@@ -6,7 +6,8 @@ import Milestones from "./Milestones";
 import ProgressBar from "./ProgressBar";
 import { MDBContainer, MDBRow } from "mdb-react-ui-kit";
 
-const RoadmapContainer = () => {
+const RoadmapContainer = (props) => {
+  const { dictionary } = props;
   const [error, setError] = useState(null);
   const [completedMilestones, setCompletedMilestones] = useState([]);
   const [incompleteMilestones, setIncompleteMilestones] = useState([]);
@@ -15,18 +16,18 @@ const RoadmapContainer = () => {
 
     axios
       .get("https://fierce-inlet-05264.herokuapp.com/api/milestones", {
-        params: { "filters[is_complete][$eq]": true},
+        params: { "filters[is_complete][$eq]": true, sort: "goal_date"},
       })
-      .then(({ data }) => {
-          setCompletedMilestones(data.data);
+      .then(({ data: { data: res }}) => {
+          setCompletedMilestones(res);
       })
       .catch((error) => setError(error));
 
     axios
       .get("https://fierce-inlet-05264.herokuapp.com/api/milestones", {
-        params: { "filters[is_complete][$eq]": false},
+        params: { "filters[is_complete][$eq]": false, sort: "goal_date"},
       })
-      .then(({ data }) => setIncompleteMilestones(data.data))
+      .then(({ data: { data: res }}) => setIncompleteMilestones(res))
       .catch((error) => setError(error));
   }, []);
 
@@ -43,8 +44,8 @@ const RoadmapContainer = () => {
     <>
       <MDBContainer>
         <MDBRow className="d-flex justify-content-center">
-          <CompletedMilestones milestones={completedMilestones} />
-          <Milestones milestones={incompleteMilestones}/>
+          <CompletedMilestones milestones={completedMilestones} dictionary={dictionary} />
+          <Milestones milestones={incompleteMilestones} dictionary={dictionary} />
         </MDBRow>  
         <ProgressBar 
         completeAmount={completeAmount}
