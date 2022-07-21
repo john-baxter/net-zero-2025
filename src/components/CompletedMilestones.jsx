@@ -1,8 +1,11 @@
-import { MDBCard, MDBCardBody, MDBCol, MDBIcon, MDBCardTitle, MDBCardText } from "mdb-react-ui-kit";
+import { MDBCard, MDBCardBody, MDBCol, MDBIcon, MDBCardTitle, MDBCardText, MDBTooltip } from "mdb-react-ui-kit";
 import React from "react";
 
 const CompletedMilestones = (props) => {
-  const { milestones } = props;
+  const { milestones, dictionary } = props;
+  const dictionary_map = new Map(dictionary.map(({term, definition}) => {
+    return [term.toLowerCase(), definition]
+  }));
 
   return (
     <>
@@ -17,7 +20,16 @@ const CompletedMilestones = (props) => {
             <MDBCardBody>
               <MDBCardTitle style={{ minHeight: 100 + 'px'}}>{attributes.title}</MDBCardTitle>
               <MDBCardText>
-                {attributes.description}
+                {attributes.description.split(" ").map( (word, index) => {
+                  if (dictionary_map.has(word)){
+                    return (
+                      <MDBTooltip key={index} tag='b' title={dictionary_map.get(word)}>{word + " "}</MDBTooltip>
+                    )
+                  }
+                  else {
+                    return word + " ";
+                  }
+                })}
               </MDBCardText>
               <MDBCardTitle>{new Date(attributes.goal_date).getFullYear()}</MDBCardTitle>
             <div className='mask rounded-3' style={{ backgroundColor: 'rgba(255, 255, 1255, 0.5)' }}></div>   </MDBCardBody>
