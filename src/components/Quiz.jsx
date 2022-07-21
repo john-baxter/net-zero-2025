@@ -24,7 +24,7 @@ const Quiz = (props) => {
 
   return (
     <>
-      <div className="quiz-app">
+      <div className="quiz-app rounded mt-5 shadow-4">
         {showScore ? (
           <div className="score-section">
             You scored {score} out of {questions.length}
