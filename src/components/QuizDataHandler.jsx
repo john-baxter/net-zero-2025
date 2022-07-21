@@ -24,6 +24,7 @@ const QuizDataHandler = () => {
     return <div>An error occured: {error.message}</div>;
   }
   if (!isLoading) {
+    
     return <QuestionBuilder questionData={questions} />;
   }
 };

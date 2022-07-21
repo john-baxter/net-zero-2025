@@ -4,7 +4,27 @@ export default function CalcDisplay({ carbonData }) {
     console.log(('b' + 'a' + + 'a' + 'a').toLowerCase())
 
   if (carbonData.length === 0) {
-    return null
+    return(
+    <div className="text-center py-4">
+
+ 
+    <div>
+      <h6>Your Carbon Footprint is:</h6>
+     <p></p>
+    </div>
+    <div>
+      <h6>Your Carbon Footprint this trip is:</h6>
+      <p></p>
+    </div>
+    <div>
+      <h6>Your Carbon Footprint per week is:</h6>
+      <p></p>
+    </div>
+    <div>
+      <h6>Your Carbon Footprint per year is:</h6>
+      <p></p>
+    </div>
+  </div>)
   }
 
   const mpg = carbonData[0].mpg;
@@ -18,24 +38,24 @@ export default function CalcDisplay({ carbonData }) {
 
 
   return (
-    <div className="text-center py-4">
+    <div className="text-center  py-4">
 
  
       <div>
-        <h5>Your Carbon Footprint is:</h5>
+        <h6>Your Carbon Footprint is:</h6>
         <p>{calc}g CO2e / mile</p>
       </div>
       <div>
-        <h5>Your Carbon Footprint this trip is:</h5>
+        <h6>Your Carbon Footprint this trip is:</h6>
         <p>{calc2}kg CO2e</p>
       </div>
       <div>
-        <h5>Your Carbon Footprint per week is:</h5>
+        <h6>Your Carbon Footprint per week is:</h6>
         <p>{calc3}kg CO2e
 </p>
       </div>
       <div>
-        <h5>Your Carbon Footprint per year is:</h5>
+        <h6>Your Carbon Footprint per year is:</h6>
         <p>{calc4}kg CO2e</p>
       </div>
     </div>

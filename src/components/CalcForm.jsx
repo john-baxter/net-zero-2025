@@ -23,7 +23,7 @@ export default function CalcForm({addCarbonData}) {
     <>
       <MDBContainer className="pt-5 text-center">
         <form  onSubmit={handleSubmit}>
-            <h5>Carbon Footprint Calculator</h5>
+        
           <MDBInput
             className="m-3"
             label="What is your car's MPG?"
