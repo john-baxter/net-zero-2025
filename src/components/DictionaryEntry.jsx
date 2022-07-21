@@ -15,6 +15,7 @@ const DictionaryEntry = (props) => {
         style={{ width: 250 + "px", height: 50 + "px" }}
         tag="a"
         onClick={toggleShow}
+        className=''
       >
         {term}
       </MDBBtn>
