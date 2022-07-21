@@ -13,6 +13,7 @@ import HeroImage from "./components/HeroImage";
 import QuizDataHandler from "./components/QuizDataHandler";
 import TipsAndTricks from "./components/TipsAndTricks";
 
+
 function App() {
   const [basicActive, setBasicActive] = useState("tab1");
 
@@ -70,8 +71,8 @@ function App() {
         </MDBTabsPane>
       </MDBTabsContent>
 
-      {/* <Quiz /> */}
-      <QuizDataHandler />
+      <QuizDataHandler/>
+
     </div>
   );
 }
