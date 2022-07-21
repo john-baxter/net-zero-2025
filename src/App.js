@@ -75,6 +75,7 @@ function App() {
                 <QuizDataHandler />
               </MDBCol>
 
+{/* REPLACE ONE OF THE CALCWRAPPER COMPNTS W STATS SECTION :))))) */}
               <MDBCol  size={12} lg={4} xs={12}>
                 <CalcWrapper/>
               </MDBCol>
