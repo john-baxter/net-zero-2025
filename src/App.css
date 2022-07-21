@@ -34,6 +34,7 @@
 .tip-image {
   width:200px;
   height:200px;
+  margin-left:10px;
   align-items:left;
   border:#EDE7F6 solid 1px;
   border-radius:10px;
