@@ -34,7 +34,7 @@ const HeroImage = () => {
           style={{ maxWidth: 250 + "px" }}
         >
           <div>
-            <h1 className="text-white text-center rounded-3 p-3 fw-bolder" id='purple'>
+            <h1 className="text-white text-center rounded-3 p-3 fw-bolder bg-secondary">
               Net Zero 2025
             </h1>
             <p className="text-white fw-bold text-center pt-2">

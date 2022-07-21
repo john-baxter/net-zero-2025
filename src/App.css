@@ -4,16 +4,8 @@
 }
 
 .nav-tabs .active {
-  color: #5E35B1!important;
-  border-color: #5E35B1!important;
-}
-
-MDBNavbar {
-  background-color: #5E35B1;
-}
-
-#purple {
-  background-color:#5E35B1;
+  color: #B23CFD!important;
+  border-color: #B23CFD!important;
 }
 
 .tip-container {
