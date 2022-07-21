@@ -1,5 +1,9 @@
 import React, { useState } from "react";
-import { MDBBtn } from "mdb-react-ui-kit";
+import {
+  MDBBtn,
+  MDBContainer,
+  MDBRow,
+} from "mdb-react-ui-kit";
 
 
 const Quiz = (props) => {
@@ -31,18 +35,19 @@ const Quiz = (props) => {
           </div>
         ) : (
           <>
-            <div className="question-section">
-              <div className="question-count">
-                <span className="question-title">
-                  Question {currentQuestion + 1}
-                </span>
-                /{questions.length}
-              </div>
-              <div className="question-text">
-                {questions[currentQuestion].questionText}
-              </div>
-            </div>
-            <div className="answer-section">
+            <MDBContainer>
+              <MDBRow>
+                <div className="question-count">
+                  <span className="question-title">
+                    Question {currentQuestion + 1}
+                  </span>
+                  /{questions.length}
+                </div>
+                <div className="question-text">
+                  {questions[currentQuestion].questionText}
+                </div>
+              </MDBRow>
+              <MDBRow>
               {questions[currentQuestion].answerOptions[0].map((index) => (
                 <MDBBtn
                   key={index.id}
@@ -54,7 +59,8 @@ const Quiz = (props) => {
                   {index.attributes.answer_text}
                 </MDBBtn>
               ))}
-            </div>
+            </MDBRow>
+              </MDBContainer>
           </>
         )}
       </div>
