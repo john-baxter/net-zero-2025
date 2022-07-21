@@ -4,7 +4,7 @@ import React from 'react'
 const Navbar = () => {
   return (
     <>
-    <MDBNavbar light bgColor='secondary'>
+    <MDBNavbar light>
         <MDBContainer >
           <MDBNavbarBrand href='#'>
             <img

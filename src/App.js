@@ -11,6 +11,7 @@ import {
 import Navbar from "./components/Navbar";
 import HeroImage from "./components/HeroImage";
 import QuizDataHandler from "./components/QuizDataHandler";
+import TipsAndTricks from "./components/TipsAndTricks";
 
 function App() {
   const [basicActive, setBasicActive] = useState("tab1");
@@ -46,6 +47,14 @@ function App() {
               Dictionary
             </MDBTabsLink>
           </MDBTabsItem>
+          <MDBTabsItem>
+            <MDBTabsLink
+              onClick={() => handleBasicClick("tab3")}
+              active={basicActive === "tab3"}
+            >
+              Tips & Tricks
+            </MDBTabsLink>
+          </MDBTabsItem>
         </MDBTabs>
       </div>
       <MDBTabsContent>
@@ -56,10 +65,13 @@ function App() {
         <MDBTabsPane show={basicActive === "tab2"}>
           <Dictionary />
         </MDBTabsPane>
+        <MDBTabsPane show={basicActive === "tab3"}>
+          <TipsAndTricks />
+        </MDBTabsPane>
       </MDBTabsContent>
 
       {/* <Quiz /> */}
-      <QuizDataHandler/>
+      <QuizDataHandler />
     </div>
   );
 }

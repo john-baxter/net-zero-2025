@@ -4,12 +4,52 @@
 }
 
 .nav-tabs .active {
-  color: #B23CFD!important;
-  border-color: #B23CFD!important;
+  color: #5E35B1!important;
+  border-color: #5E35B1!important;
 }
 
-.app {
+MDBNavbar {
+  background-color: #5E35B1;
+}
+
+#purple {
+  background-color:#5E35B1;
+}
+
+.tip-container {
   margin:20px;
+  padding:20px;
+  background-color:#EDE7F6;
+  border:rgba(0,0,0,0) solid 1px;
+  border-radius:10px;
+  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.2);
+  display:flex;
+  justify-content:space-between
+}
+
+.tip-area {
+  margin-left:10px
+}
+
+.tip-heading {
+  font-size:24pt;
+}
+
+.tip-text {
+  font-size:13pt;
+}
+
+.tip-image {
+  width:200px;
+  height:200px;
+  align-items:left;
+  border:#EDE7F6 solid 1px;
+  border-radius:10px;
+}
+
+.quiz-app {
+  margin:20px;
+  margin-top:40px;
   padding:20px;
   background-color:#B23CFD;
   border:#fff solid 5px;
@@ -19,6 +59,10 @@
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
   display: flex;
   justify-content: space-evenly;
+}
+
+.quiz-area {
+  margin-top:3000px;
 }
 
 /* QUESTION/TIMER/LEFT SECTION */
