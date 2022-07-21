@@ -35,7 +35,7 @@ export default function CalcForm({addCarbonData}) {
           />
           <MDBInput
             className="m-3"
-            label="What is the total commute distance? (in miles)?"
+            label="What is the commute distance? (miles)"
             name="dist"
             type="number"
             value={carbonData.dist}
