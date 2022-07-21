@@ -20,6 +20,7 @@ import HeroImage from "./components/HeroImage";
 import QuizDataHandler from "./components/QuizDataHandler";
 import TipsAndTricks from "./components/TipsAndTricks";
 import CalcWrapper from "./components/CalcWrapper";
+import StatsSection from "./components/StatsSection";
 
 function App() {
   const [basicActive, setBasicActive] = useState("tab1");
@@ -92,7 +93,7 @@ function App() {
                 <CalcWrapper/>
               </MDBCol>
               <MDBCol size={12} lg={4} xs={12}>
-                <CalcWrapper />
+                <StatsSection/>
               </MDBCol>
             </MDBRow>
           </MDBContainer>
